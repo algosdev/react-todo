@@ -29,7 +29,7 @@ class ListArea extends Component {
                 )
             }
             )) : (
-                <div>Task can not be found</div>
+                <div>Tasks can not be found</div>
             )
         console.log(string)
         return (
