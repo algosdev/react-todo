@@ -24,7 +24,7 @@ class ListArea extends Component {
                     <li key={task.id} className={`${imp} ${done}`}>
                         <p onClick={() => { this.props.changeDone(task.id) }}>{task.text}</p>
                         <div>
-                            <button className={`impo ${imp}`} onClick={() => { this.props.changeImp(task.id) }}>
+                            <button className='impo' onClick={() => { this.props.changeImp(task.id) }}>
                                 <FaExclamation /></button>
                             <button className='del' onClick={() => { this.props.taskDel(task.id) }}>
                                 <MdDelete /></button>
