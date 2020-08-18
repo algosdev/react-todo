@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { MdDelete } from 'react-icons/md'
+import { FaExclamation } from 'react-icons/fa'
 
 class ListArea extends Component {
     render() {
@@ -19,19 +21,20 @@ class ListArea extends Component {
                 let imp = (task.isImportant) ? 'imp' : '';
                 let done = (task.isDone) ? 'done' : '';
                 return (
-                    <li key={task.id} className='list'>
-                        <span className={`${imp} ${done}`} onClick={() => { this.props.changeDone(task.id) }}>{task.text}</span>
+                    <li key={task.id} className={`${imp} ${done}`}>
+                        <p onClick={() => { this.props.changeDone(task.id) }}>{task.text}</p>
                         <div>
-                            <button onClick={() => { this.props.changeImp(task.id) }}>Important</button>
-                            <button onClick={() => { this.props.taskDel(task.id) }}>Delete</button>
-                        </div>
-                    </li>
+                            <button className={`impo ${imp}`} onClick={() => { this.props.changeImp(task.id) }}>
+                                <FaExclamation /></button>
+                            <button className='del' onClick={() => { this.props.taskDel(task.id) }}>
+                                <MdDelete /></button>
+                        </div >
+                    </li >
                 )
             }
             )) : (
                 <div>Tasks can not be found</div>
             )
-        console.log(string)
         return (
             <div>
                 <ul>

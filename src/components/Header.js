@@ -4,7 +4,7 @@ class Header extends Component {
     render() {
         return (
             <div className='header'>
-                <p>Algos Todo</p>
+                <h1>Algos Todo</h1>
                 <p>{this.props.active} more to do, {this.props.done} done</p>
             </div>
         )
